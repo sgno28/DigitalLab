@@ -13,17 +13,26 @@ initial begin
     $dumpfile("alu_tb.vcd");
     $dumpvars(0, alu_tb);
 
-    a = 8'd23;
-    b = 8'd23;
+    ALUControl = 2'b00; //and
+    a = 8'b00000001;
+    b = 8'b00000000; #20;
 
-    ALUControl = 2'b00; #20;
-    ALUControl = 2'b01; #20;
-    ALUControl = 2'b10; #20;
-    ALUControl = 2'b11; #20;
+    ALUControl = 2'b01; //or
+    a = 8'b00000001;
+    b = 8'b00000001;  #20;
+
+    ALUControl = 2'b10; //add
+    a = 8'b00000001;
+    b = 8'b00000001; #20;
+
+    ALUControl = 2'b11; //sub
+    a = 8'b00000010;
+    b = 8'b00000001; #20;
+
 end
 
 initial begin 
-    $monitor("t = %3d, a = %d, b = %d, ALUResult = %d,  ALUControl = %b\n", $time, a, b, ALUResult, ALUControl);
+    $monitor("t = %3d, a = %b, b = %b, ALUResult = %b,  ALUControl = %b\n", $time, a, b, ALUResult, ALUControl);
 end
 
 endmodule

@@ -1,4 +1,5 @@
-module alu(input logic [7:0] a,b,
+module alu(input logic [7:0] a, 
+            input logic [7:0] b,
             input logic [1:0] ALUControl,
             output logic [7:0] ALUResult);
 
@@ -9,6 +10,6 @@ always_comb
     2'b10 : ALUResult = a + b;  //add
     2'b11 : ALUResult = a - b;  //subtract
     default : ALUResult = 8'bx;
-end
+    endcase
 
 endmodule
