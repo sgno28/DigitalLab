@@ -22,11 +22,15 @@ initial begin
     reset = 1; 
     #10 reset = 0;
     #10 RegWrite = 1;
+
     #10 WA = 1; external_data_in = 0; ALUSrc = 1'b1; ALUControl = 2'b00; //0 written into reg 1
-    #10 WA = 2; external_data_in = 1; ALUSrc = 1'b1; ALUControl = 2'b01; //1 written into reg 2
-    #10 WA = 5; external_data_in = 5; ALUSrc = 1'b1; ALUControl = 2'b01; //5 written into reg 5
-    #10 WA = 4; external_data_in = 4; ALUSrc = 1'b1; ALUControl = 2'b01; //4 written into reg 4
+    #10 WA = 2; external_data_in = 1; RA1 = 1; ALUSrc = 1'b1; ALUControl = 2'b01; //1 written into reg 2
+    
+    #10 WA = 5; external_data_in = 5; RA1 = 1; ALUSrc = 1'b1; ALUControl = 2'b01; //5 written into reg 5
+    #10 WA = 4; external_data_in = 4; RA1 = 1; ALUSrc = 1'b1; ALUControl = 2'b01; //4 written into reg 4
+
     #10 RegWrite = 0;
+
     #10 RA1 = 5; RA2 = 4; ALUSrc = 1'b0; ALUControl = 2'b10; //add 5 and 4
     #10 RA1 = 5; RA2 = 4; ALUSrc = 1'b0; ALUControl = 2'b11; //subtract 4 from 5
     #20;

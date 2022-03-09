@@ -12,11 +12,11 @@ logic [7:0] RD1, RD2, SrcA, SrcB;
 reg_file reg_file(.RA1(RA1), .RA2(RA2), .WA(WA), .data_in(ALUResult),
                 .clk(clk), .reset(reset), .write_enable(RegWrite),
                 .data_out1(RD1), .data_out2(RD2));
-                
+
 alu alu(.a(SrcA), .b(SrcB), .ALUControl(ALUControl), 
         .ALUResult(ALUResult));
 
-assign SrcA = RD1;
+assign SrcA = RD1;        
 
 always_comb
     case(ALUSrc)
