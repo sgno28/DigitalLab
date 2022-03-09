@@ -1,0 +1,139 @@
+$date
+	Wed Mar 09 21:34:38 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module pc_tb $end
+$var wire 8 ! count [7:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var reg 8 $ count [7:0] $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 % i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+bx $
+1#
+0"
+bx !
+$end
+#10
+b0 !
+b0 $
+1"
+#15
+0#
+#20
+0"
+#25
+b1 %
+#30
+b1 !
+b1 $
+1"
+#35
+b10 %
+#40
+0"
+#45
+b11 %
+#50
+b10 !
+b10 $
+1"
+#55
+b100 %
+#60
+0"
+#65
+b101 %
+#70
+b11 !
+b11 $
+1"
+#75
+b110 %
+#80
+0"
+#85
+b111 %
+#90
+b100 !
+b100 $
+1"
+#95
+b1000 %
+#100
+0"
+#105
+b1001 %
+#110
+b101 !
+b101 $
+1"
+#115
+b1010 %
+#120
+0"
+#125
+b1011 %
+1#
+#130
+b0 !
+b0 $
+1"
+#135
+b1100 %
+0#
+#140
+0"
+#145
+b1101 %
+#150
+b1 !
+b1 $
+1"
+#155
+b1110 %
+#160
+0"
+#165
+b1111 %
+#170
+b10 !
+b10 $
+1"
+#175
+b10000 %
+#180
+0"
+#185
+b10001 %
+#190
+b11 !
+b11 $
+1"
+#195
+b10010 %
+#200
+0"
+#205
+b10011 %
+#210
+b100 !
+b100 $
+1"
+#215
+b10100 %
