@@ -16,10 +16,16 @@ initial begin
     ALUControl = 2'b00; //and
     a = 8'b00000001;
     b = 8'b00000000; #20;
+    ALUControl = 2'b00; //and
+    a = 8'b00000001;
+    b = 8'b00000011; #20;
 
     ALUControl = 2'b01; //or
     a = 8'b00000001;
-    b = 8'b00000001;  #20;
+    b = 8'b00000000;  #20;
+     ALUControl = 2'b01; //or
+    a = 8'b00000111;
+    b = 8'b00000000;  #20;
 
     ALUControl = 2'b10; //add
     a = 8'b00000001;
