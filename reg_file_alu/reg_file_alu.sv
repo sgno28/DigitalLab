@@ -1,5 +1,5 @@
-`include "reg/reg_file.sv"//including the files used for reg and alu
-`include "ALU/alu.sv"
+`include "reg_file.sv"//including the files used for reg and alu
+`include "alu.sv"
 
 module reg_file_alu(input logic [3:0] RA1, RA2, WA,
         input logic [7:0] external_data_in,
