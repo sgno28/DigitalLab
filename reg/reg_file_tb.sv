@@ -38,9 +38,7 @@ initial begin
 end
 
 initial begin // Response monitor
-    $monitor ("t = %3d | clk = %b | reset = %b | RA1 = %b | RA2 = %b | \
-            WA = %b | write_enable = %b | data_in = %b | data_out1 = %b | \
-            data_out2 = %b", $time, clk, reset, RA1, RA2, WA, write_enable, data_in, data_out1, data_out2);
+    $monitor ("t = %3d|clk = %b|reset = %b|RA1 = %b|RA2 = %b |WA = %b|write_enable = %b|data_in = %b|data_out1 = %b|data_out2 = %b", $time, clk, reset, RA1, RA2, WA, write_enable, data_in, data_out1, data_out2);
 end
 
 endmodule

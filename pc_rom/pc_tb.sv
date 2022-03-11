@@ -8,7 +8,7 @@ logic [7:0] count;
 pc dut (clk, reset, count);
 
 initial begin
-    clk = 0;
+    clk = 023
     forever #10 clk = ~clk;
 end
 
