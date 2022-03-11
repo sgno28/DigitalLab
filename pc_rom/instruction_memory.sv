@@ -9,6 +9,7 @@ module instruction_memory (
 logic [7:0] PC, A;
 pc pc (.clk(clk), .reset(reset), .count(PC));
 rom rom(.address(A), .data_out(Instr));
-assign PC = A;
+assign A = PC;
+
 endmodule
 
